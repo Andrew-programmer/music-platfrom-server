@@ -35,10 +35,10 @@ export class TrackController{
         return this.trackService.getAll(count, offset);
     }
 
-    // @Get()
-    // search(@){
-    //
-    // }
+    @Get('search')
+    search(@Query('query') query: string){
+        return this.trackService.search(query);
+    }
 
     @Get(':id')
     getOne(@Param('id') id: Types.ObjectId) {
