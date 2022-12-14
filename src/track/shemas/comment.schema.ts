@@ -11,6 +11,9 @@ export class Comment {
     @Prop()
     username: string;
 
+    @Prop()
+    isPositive: boolean;
+
     @Prop({type: {type: Types.ObjectId, ref: 'Track'}})
     track: Track;
 
